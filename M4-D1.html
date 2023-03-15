@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <link rel="stylesheet" href="funzione.js">
+    
+</head>
+<body>
+
+
+
+
+    <script>
+        function calcoloNum(num1, num2){
+            let somma = num1 + num2;
+            console.log(somma);
+            if(num1 === num2){
+                somma *= 3;
+            }
+            return somma;
+
+        }
+        console.log(calcoloNum(7,7));
+
+        //ESERCIZIO 2
+        function controllaSe(num1, num2){
+            if(num1 === 50 || num2 === 50 || num1 + num2 === 50){
+                return true;
+            } return false;
+        }
+        console.log(controllaSe(50, 12));
+        console.log(controllaSe(5, 50));
+        console.log(controllaSe(25, 25));
+
+        //ESERCIZIO 3
+
+        const es3 = function(str, i) {
+    return "".concat(str.substring(0, i), str.substring(i+1, str.length));
+        }
+
+        //ESERCIZIO 4
+
+        function valoreAlto(num1, num2,num3){
+            if(num1 > num2 && num1 > num3){
+                return num1;
+            }else if(num2 > num1 && num2 > num3 ){
+                return num2;
+            }else{
+                return num3;
+            }
+        }
+        console.log(valoreAlto(12,30,24));
+
+        //ESERCIZIO 5
+
+        function controllaNUm(num1, num2){
+            if((num1 > 40 && num1 < 60 || num1 > 70 && num1 < 100)  && (num2 > 40 && num2 < 60 || num2 > 70 && num2 < 100)){
+                return true;
+            }return false;
+        }
+        console.log(controllaNUm(20,50));
+        console.log(controllaNUm(80,120));
+
+        //ESERCIZIO 6
+
+        function stringa(stringa, comevuoi){
+            let parola = ""
+            for(let i = 0; i < comevuoi; i++){
+                parola = parola.concat(stringa);
+            }
+            return parola;
+        }
+        console.log(stringa("a caso", 2));
+
+        //ESERCIZIO 7
+
+        function controllaCity(city){
+            if(city.startWith("Los") || city.startWith("New")){
+                return city;
+            }
+            return false;
+
+        }
+        console.log(controllaCity("Mosca"));
+        console.log(controllaCity("New York"));
+        console.log(controllaCity("Los Angeles"));
+
+        //ESERCIZIO 8
+
+        function controllaArray(arr){
+            let somma = 0;
+            for(let element of arr){
+                somma += element
+            } 
+            return somma;
+        }
+        console.log(controllaArray([34,62,12]));
+
+        //ESERCIZIO 9
+
+        function controllaNumeri(arr1){
+            for(let element of arr1){
+                if(element === 1 || element === 3){
+                    return true;
+                }
+    
+            }return false;
+        }
+        console.log(controllaNumeri([10,3]));
+        console.log(controllaNumeri([20,1]));
+
+        //ESERCIZIO 10
+
+        function controllaNumerii(arr2){
+            for(let element of arr2){
+                if(element === 1 || element === 3){
+                    return false;
+                }
+    
+            }return true;
+        }
+        console.log(controllaNumerii([10,3]));
+        console.log(controllaNumerii([20,1]));
+
+        
+        
+
+
+    </script>
+</body>
+</html>
